@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IMC Fácil</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="IMC Fácil"> 
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Sobre o IMC</a></li>
+        <li><a href="#">Dicas de Saúde</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção principal -->
+  <main>
+    <section class="calculadora">
+      <div class="formulario">
+        <h2>Calcule seu IMC agora</h2>
+        <p>Informe seus dados e descubra se está dentro do peso ideal.</p>
+        <form id="imc-form">
+          <input type="text" placeholder="Nome (opcional)" />
+          <input type="number" placeholder="Idade (opcional)" />
+          <input type="number" step="0.01" placeholder="Altura (em metros)" id="altura" required />
+          <input type="number" placeholder="Peso (em kg)" id="peso" required />
+          <button type="submit">Calcular IMC</button>
+        </form>
+        <div id="resultado"></div>
+      </div>
+
+      <div class="imagem-ilustrativa">
+        <img src="assets/mulher.png" alt="Pessoa na balança" />
+      </div>
+    </section>
+
+    <!-- Tabela de referência -->
+    <section class="tabela-imc">
+      <h3>Tabela de Referência</h3>
+      <ul>
+        <li class="baixo">Abaixo do peso</li>
+        <li class="normal">Peso normal</li>
+        <li class="sobrepeso">Sobrepeso</li>
+        <li class="obesidade">Obesidade</li>
+      </ul>
+    </section>
+
+    <!-- Dicas de saúde -->
+    <section class="dicas">
+      <div class="dica">
+        <img src="assets/alimentacao.png" alt="Alimentação Saudável" />
+        <p><strong>Alimentação saudável</strong><br>Prefira alimentos naturais e balanceados.</p>
+      </div>
+      <div class="dica">
+        <img src="assets/halter.png" alt="Sono adequado" />
+        <p><strong>Exercícios regulares</strong><br>Pratique atividades físicas frequentemente.</p>
+      </div>
+       <div class="dica">
+        <img src="assets/sono.png" alt="Sono adequado" />
+        <p><strong>Sono adequado</strong><br>Garanta entre 7–9 horas de sono por noite.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2025 IMC Fácil. Todos os direitos reservados.</p>
+    <nav>
+      <a href="#">Política de Privacidade</a> |
+      <a href="#">Termos de Uso</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

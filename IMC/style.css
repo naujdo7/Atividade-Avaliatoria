@@ -1,0 +1,315 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9fbfe;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 32px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+/* Seção principal */
+main {
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.calculadora {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.formulario {
+  max-width: 400px;
+}
+
+.formulario h2 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.formulario p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.formulario input,
+.formulario button {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.formulario input:focus {
+  outline: 2px solid #007bff;
+}
+
+.formulario button {
+  background-color: #ffa53a;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.formulario button:hover {
+  background-color: #e0881f;
+}
+
+#resultado {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.imagem-ilustrativa img {
+  margin-right: 200px;  
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Tabela de IMC */
+.tabela-imc h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.tabela-imc ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tabela-imc li {
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.tabela-imc .baixo {
+  background-color: #a9cde8;
+}
+
+.tabela-imc .normal {
+  background-color: #c8e6c9;
+  color: #2e7d32;
+}
+
+.tabela-imc .sobrepeso {
+  background-color: #ffe082;
+  color: #795548;
+}
+
+.tabela-imc .obesidade {
+  background-color: #ef9a9a;
+  color: #c62828;
+}
+
+/* Dicas de saúde */
+.dicas {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dica {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 250px;
+}
+
+.dica img {
+  height: 40px;
+}
+
+.dica p {
+  font-size: 14px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #f1f1f1;
+  padding: 20px 50px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+footer nav {
+  margin-top: 10px;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .calculadora {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagem-ilustrativa img {
+    max-width: 100%;
+  }
+}
+
+/* Telas até 1024px (tablets) */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 30px;
+    gap: 15px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .formulario h2 {
+    font-size: 40px;
+  }
+
+  .imagem-ilustrativa img {
+    margin-right: 0;
+    max-width: 350px;
+  }
+
+  main {
+    padding: 30px;
+  }
+
+  .dica {
+    flex-direction: row;
+  }
+}
+
+/* Telas até 768px (smartphones) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .calculadora {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .formulario {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .formulario h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .formulario p {
+    text-align: center;
+  }
+
+  .imagem-ilustrativa img {
+    margin: 0 auto;
+    max-width: 250px;
+  }
+
+  .dicas {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .dica {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  footer {
+    padding: 20px;
+    font-size: 13px;
+  }
+
+  footer nav {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
