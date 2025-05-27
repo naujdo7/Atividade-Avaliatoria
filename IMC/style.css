@@ -28,9 +28,7 @@ header {
   gap: 10px;
 }
 
-.logo img {
-  height: 32px;
-}
+
 
 nav ul {
   list-style: none;
@@ -57,15 +55,15 @@ main {
 }
 
 .calculadora {
+  justify-content: center;
+  align-items: center;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   flex-wrap: wrap;
   gap: 30px;
 }
 
 .formulario {
-  max-width: 400px;
+  width: 40%;
 }
 
 .formulario h2 {
@@ -114,10 +112,16 @@ main {
   font-size: 18px;
 }
 
-.imagem-ilustrativa img {
-  margin-right: 200px;  
-  max-width: 400px;
+.imagem-ilustrativa {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagem-ilustrativa .img-pc {
   width: 100%;
+  max-width: 612px;
 }
 
 /* Tabela de IMC */
@@ -160,7 +164,7 @@ main {
 
 /* Dicas de saúde */
 .dicas {
-  display: flex;
+  display: block;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -170,16 +174,25 @@ main {
   border: 1px solid #ddd;
   border-radius: 12px;
   padding: 20px;
-  display: flex;
-  gap: 15px;
+  display: inline-block;
   align-items: center;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
   flex: 1;
   min-width: 250px;
 }
 
+.dica-box {
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+}
 .dica img {
   height: 40px;
+}
+
+.dicas h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
 }
 
 .dica p {
@@ -225,7 +238,8 @@ footer a:hover {
 @media (max-width: 1024px) {
   header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     padding: 20px 30px;
     gap: 15px;
   }
@@ -239,11 +253,6 @@ footer a:hover {
     font-size: 40px;
   }
 
-  .imagem-ilustrativa img {
-    margin-right: 0;
-    max-width: 350px;
-  }
-
   main {
     padding: 30px;
   }
@@ -252,6 +261,7 @@ footer a:hover {
     flex-direction: row;
   }
 }
+
 
 /* Telas até 768px (smartphones) */
 @media (max-width: 768px) {
@@ -288,10 +298,10 @@ footer a:hover {
     text-align: center;
   }
 
-  .imagem-ilustrativa img {
-    margin: 0 auto;
-    max-width: 250px;
+  .imagem-ilustrativa {
+    display: none;
   }
+}
 
   .dicas {
     flex-direction: column;
@@ -303,6 +313,10 @@ footer a:hover {
     align-items: flex-start;
   }
 
+   .dica-box { 
+    flex-wrap: wrap;
+  }
+
   footer {
     padding: 20px;
     font-size: 13px;
@@ -312,4 +326,4 @@ footer a:hover {
     flex-direction: column;
     gap: 5px;
   }
-}
+
